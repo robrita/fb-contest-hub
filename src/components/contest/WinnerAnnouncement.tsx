@@ -5,10 +5,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 
 interface Winner {
-  id: string
   name: string
-  profilePicture?: string
-  fbProfileUrl?: string
   announcementDate: string
 }
 
@@ -40,11 +37,6 @@ export function WinnerAnnouncement({ winner }: WinnerAnnouncementProps) {
           
           <div className="space-y-4">
             <Avatar className="w-24 h-24 mx-auto border-4 border-accent shadow-lg">
-              <AvatarImage 
-                src={winner.profilePicture} 
-                alt={winner.name}
-                className="object-cover"
-              />
               <AvatarFallback className="text-2xl font-bold bg-accent text-accent-foreground">
                 {winner.name.split(' ').map(n => n[0]).join('')}
               </AvatarFallback>

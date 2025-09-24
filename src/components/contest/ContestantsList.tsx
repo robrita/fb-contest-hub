@@ -2,27 +2,20 @@ import { useState } from 'react'
 import { MagnifyingGlass } from '@phosphor-icons/react'
 import { Input } from '@/components/ui/input'
 
-interface Contestant {
-  id: string
-  name: string
-  profilePicture?: string
-  fbProfileUrl?: string
-}
-
 interface ContestantsListProps {
-  contestants: Contestant[]
-  winnerId?: string
+  contestants: string[]
+  winnerName?: string
 }
 
-export function ContestantsList({ contestants, winnerId }: ContestantsListProps) {
+export function ContestantsList({ contestants, winnerName }: ContestantsListProps) {
   const [searchQuery, setSearchQuery] = useState('')
 
   const filteredContestants = contestants
-    .filter(contestant => contestant.id !== winnerId)
-    .filter(contestant => 
-      contestant.name.toLowerCase().includes(searchQuery.toLowerCase())
+    .filter(name => name !== winnerName)
+    .filter(name => 
+      name.toLowerCase().includes(searchQuery.toLowerCase())
     )
-    .sort((a, b) => a.name.localeCompare(b.name))
+    .sort((a, b) => a.localeCompare(b))
 
   return (
     <section className="space-y-6">
@@ -75,9 +68,9 @@ export function ContestantsList({ contestants, winnerId }: ContestantsListProps)
         <div className="text-center">
           <div className="inline-block text-left max-w-2xl">
             <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center">
-              {filteredContestants.map((contestant, index) => (
-                <span key={contestant.id} className="text-foreground">
-                  {contestant.name}
+              {filteredContestants.map((name, index) => (
+                <span key={name} className="text-foreground">
+                  {name}
                   {index < filteredContestants.length - 1 && (
                     <span className="text-muted-foreground ml-1">•</span>
                   )}

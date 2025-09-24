@@ -9,14 +9,8 @@ import { ContestDemo } from '@/components/contest/ContestDemo'
 import contestData from '@/data/contest.json'
 import contestWithWinnerData from '@/data/contest-with-winner.json'
 
-interface Contestant {
-  id: string
+interface Winner {
   name: string
-  profilePicture?: string
-  fbProfileUrl?: string
-}
-
-interface Winner extends Contestant {
   announcementDate: string
 }
 
@@ -30,7 +24,7 @@ interface ContestData {
     mechanics: string[]
   }
   winner: Winner | null
-  contestants: Contestant[]
+  contestants: string[]
 }
 
 function App() {
@@ -91,7 +85,7 @@ function App() {
 
           <ContestantsList 
             contestants={data.contestants}
-            winnerId={data.winner?.id}
+            winnerName={data.winner?.name}
           />
         </div>
       </div>
