@@ -10,6 +10,8 @@ const projectRoot = process.env.PROJECT_ROOT || import.meta.dirname
 
 // https://vite.dev/config/
 export default defineConfig({
+  // Set base path for GitHub Pages (will be the repository name)
+  base: process.env.NODE_ENV === 'production' ? '/fb-contest-hub/' : '/',
   plugins: [
     react(),
     tailwindcss(),
@@ -22,4 +24,17 @@ export default defineConfig({
       '@': resolve(projectRoot, 'src')
     }
   },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu']
+        }
+      }
+    }
+  }
 });
