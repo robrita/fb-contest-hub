@@ -2,14 +2,12 @@
   "contest": {
     "title": "Win a $500 Gift Card!",
     "tagline": "React with ❤️ to our Facebook post for your chance to win",
-    "description": "Join our amazing community contest and win a $500 gift card to your favorite store!",
+    "description": "Win a $500 gift card to your favorite store!",
     "fbPostUrl": "https://facebook.com/yourpage/posts/123456789",
     "announcementDate": "2024-12-20T18:00:00.000Z",
     "mechanics": [
       "React with ❤️ to our Facebook post",
-      "Winner will be announced on this page December 20th at 6 PM",
-      "Must be following our page to be eligible",
-      "One entry per person"
+      "Winner will be announced on this page December 20th at 6 PM"
     ]
   },
   "winner": null,

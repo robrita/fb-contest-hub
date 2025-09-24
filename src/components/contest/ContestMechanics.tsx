@@ -1,4 +1,4 @@
-import { Heart, CheckCircle } from '@phosphor-icons/react'
+import { Heart } from '@phosphor-icons/react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 
@@ -47,16 +47,6 @@ export function ContestMechanics({ mechanics, fbPostUrl }: ContestMechanicsProps
               </Button>
             </div>
           )}
-
-          <div className="mt-6 p-4 bg-muted rounded-lg">
-            <div className="flex items-start gap-3">
-              <CheckCircle size={20} className="text-green-600 mt-0.5 flex-shrink-0" />
-              <div className="text-sm text-muted-foreground">
-                <p className="font-medium text-foreground mb-1">Good to know:</p>
-                <p>Winner will be selected randomly from all eligible participants. Make sure you're following our page to be eligible for the prize!</p>
-              </div>
-            </div>
-          </div>
         </CardContent>
       </Card>
     </section>
