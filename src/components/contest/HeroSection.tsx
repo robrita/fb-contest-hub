@@ -33,20 +33,22 @@ export function HeroSection({
   }
 
   return (
-    <section className="text-center space-y-6 py-12">
-      <div className="space-y-4">
-        <h1 className="text-4xl sm:text-5xl font-bold text-foreground leading-tight">
+    <section className="text-center space-y-4 py-6">
+      <div className="space-y-3">
+        <h1 className="text-4xl sm:text-5xl font-bold text-red-600 leading-tight">
           {title}
         </h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           {tagline}
         </p>
-        <p className="text-foreground max-w-lg mx-auto leading-relaxed">
-          {description}
-        </p>
+        {description && (
+          <p className="text-foreground max-w-lg mx-auto leading-relaxed">
+            {description}
+          </p>
+        )}
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-2">
         {fbPostUrl && (
           <Button asChild size="lg" className="min-w-48">
             <a 
