@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { MagnifyingGlass } from '@phosphor-icons/react'
 import { Input } from '@/components/ui/input'
-import { ContestantCard } from './ContestantCard'
 
 interface Contestant {
   id: string
@@ -73,10 +72,19 @@ export function ContestantsList({ contestants, winnerId }: ContestantsListProps)
           )}
         </div>
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-          {filteredContestants.map((contestant) => (
-            <ContestantCard key={contestant.id} contestant={contestant} />
-          ))}
+        <div className="text-center">
+          <div className="inline-block text-left max-w-2xl">
+            <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center">
+              {filteredContestants.map((contestant, index) => (
+                <span key={contestant.id} className="text-foreground">
+                  {contestant.name}
+                  {index < filteredContestants.length - 1 && (
+                    <span className="text-muted-foreground ml-1">•</span>
+                  )}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       )}
     </section>
