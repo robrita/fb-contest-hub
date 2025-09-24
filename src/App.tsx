@@ -41,6 +41,13 @@ function App() {
         <div className="space-y-8">
           <CountdownTimer targetDate={data.contest.announcementDate} />
           
+          {data.winner && (
+            <>
+              <WinnerAnnouncement winner={data.winner} announcementDate={data.contest.announcementDate} />
+              <Separator />
+            </>
+          )}
+
           <HeroSection
             title={data.contest.title}
             tagline={data.contest.tagline}
@@ -50,13 +57,6 @@ function App() {
           />
 
           <Separator />
-
-          {data.winner && (
-            <>
-              <WinnerAnnouncement winner={data.winner} announcementDate={data.contest.announcementDate} />
-              <Separator />
-            </>
-          )}
 
           {(showMechanics || !data.winner) && (
             <>
