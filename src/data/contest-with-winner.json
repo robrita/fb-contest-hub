@@ -1,0 +1,29 @@
+{
+  "contest": {
+    "title": "Win ₱500 sent through GCash",
+    "tagline": "React with ❤️ to our Facebook post for your chance to win",
+    "description": "",
+    "fbPostUrl": "https://facebook.com/yourpage/posts/123456789",
+    "announcementDate": "2024-12-20T18:00:00.000Z",
+    "mechanics": [
+      "React with ❤️ to our Facebook post",
+      "Winner will be announced on this page December 20th at 6 PM"
+    ]
+  },
+  "winner": {
+    "name": "Emily Rodriguez",
+    "announcementDate": "2024-12-20T18:00:00.000Z"
+  },
+  "contestants": [
+    "Sarah Johnson",
+    "Mike Chen", 
+    "Emily Rodriguez",
+    "David Kim",
+    "Jessica Williams",
+    "Alex Thompson",
+    "Maria Garcia",
+    "James Wilson",
+    "Ashley Brown",
+    "Ryan Martinez"
+  ]
+}
