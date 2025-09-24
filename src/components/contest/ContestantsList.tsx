@@ -24,7 +24,7 @@ export function ContestantsList({ contestants, winnerName }: ContestantsListProp
           Contest Participants
         </h2>
         <p className="text-muted-foreground">
-          {filteredContestants.length} participant{filteredContestants.length !== 1 ? 's' : ''} joined the contest
+          {filteredContestants.length} participant{filteredContestants.length !== 1 ? 's' : ''} joined the contest. Note: The list takes time to update
         </p>
       </div>
 
