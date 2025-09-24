@@ -80,13 +80,6 @@ export function HeroSection({
           Share Contest
         </Button>
       </div>
-
-      <div className="pt-8">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 text-secondary-foreground rounded-full text-sm">
-          <Heart size={16} className="text-red-500" />
-          <span>Free to enter • Random winner selection</span>
-        </div>
-      </div>
     </section>
   )
 }

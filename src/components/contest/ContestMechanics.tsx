@@ -11,12 +11,9 @@ export function ContestMechanics({ mechanics, fbPostUrl }: ContestMechanicsProps
   return (
     <section className="space-y-6">
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-foreground mb-2">
+        <h2 className="text-3xl font-bold text-red-600 mb-6">
           How to Join
         </h2>
-        <p className="text-muted-foreground">
-          Follow these simple steps to enter the contest
-        </p>
       </div>
 
       <Card>
