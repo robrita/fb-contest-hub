@@ -1,0 +1,84 @@
+{
+  "contest": {
+    "title": "Win a $500 Gift Card!",
+    "tagline": "React with ❤️ to our Facebook post for your chance to win",
+    "description": "Join our amazing community contest and win a $500 gift card to your favorite store!",
+    "fbPostUrl": "https://facebook.com/yourpage/posts/123456789",
+    "announcementDate": "2024-12-20T18:00:00.000Z",
+    "mechanics": [
+      "React with ❤️ to our Facebook post",
+      "Winner will be announced on this page December 20th at 6 PM",
+      "Must be following our page to be eligible",
+      "One entry per person"
+    ]
+  },
+  "winner": {
+    "id": "3",
+    "name": "Emily Rodriguez",
+    "profilePicture": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    "fbProfileUrl": "https://facebook.com/emily.rodriguez",
+    "announcementDate": "2024-12-20T18:00:00.000Z"
+  },
+  "contestants": [
+    {
+      "id": "1",
+      "name": "Sarah Johnson",
+      "profilePicture": "https://images.unsplash.com/photo-1494790108755-2616b9e85c64?w=150&h=150&fit=crop&crop=face",
+      "fbProfileUrl": "https://facebook.com/sarah.johnson"
+    },
+    {
+      "id": "2", 
+      "name": "Mike Chen",
+      "profilePicture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      "fbProfileUrl": "https://facebook.com/mike.chen"
+    },
+    {
+      "id": "3",
+      "name": "Emily Rodriguez",
+      "profilePicture": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      "fbProfileUrl": "https://facebook.com/emily.rodriguez"
+    },
+    {
+      "id": "4",
+      "name": "David Kim",
+      "profilePicture": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      "fbProfileUrl": "https://facebook.com/david.kim"
+    },
+    {
+      "id": "5",
+      "name": "Jessica Williams",
+      "profilePicture": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+      "fbProfileUrl": "https://facebook.com/jessica.williams"
+    },
+    {
+      "id": "6",
+      "name": "Alex Thompson",
+      "profilePicture": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+      "fbProfileUrl": "https://facebook.com/alex.thompson"
+    },
+    {
+      "id": "7",
+      "name": "Maria Garcia",
+      "profilePicture": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
+      "fbProfileUrl": "https://facebook.com/maria.garcia"
+    },
+    {
+      "id": "8",
+      "name": "James Wilson",
+      "profilePicture": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
+      "fbProfileUrl": "https://facebook.com/james.wilson"
+    },
+    {
+      "id": "9",
+      "name": "Ashley Brown",
+      "profilePicture": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face",
+      "fbProfileUrl": "https://facebook.com/ashley.brown"
+    },
+    {
+      "id": "10",
+      "name": "Ryan Martinez",
+      "profilePicture": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=150&h=150&fit=crop&crop=face",
+      "fbProfileUrl": "https://facebook.com/ryan.martinez"
+    }
+  ]
+}
