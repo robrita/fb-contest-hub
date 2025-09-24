@@ -1,13 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Separator } from '@/components/ui/separator'
 import { CountdownTimer } from '@/components/contest/CountdownTimer'
 import { HeroSection } from '@/components/contest/HeroSection'
 import { ContestMechanics } from '@/components/contest/ContestMechanics'
 import { WinnerAnnouncement } from '@/components/contest/WinnerAnnouncement'
 import { ContestantsList } from '@/components/contest/ContestantsList'
-import { ContestDemo } from '@/components/contest/ContestDemo'
 import contestData from '@/data/contest.json'
-import contestWithWinnerData from '@/data/contest-with-winner.json'
 
 interface Winner {
   name: string
@@ -28,10 +26,9 @@ interface ContestData {
 }
 
 function App() {
-  const [showWinner, setShowWinner] = useState(false)
   const [showMechanics, setShowMechanics] = useState(false)
   
-  const data: ContestData = showWinner ? contestWithWinnerData : contestData
+  const data: ContestData = contestData
 
   const scrollToMechanics = () => {
     setShowMechanics(true)
@@ -47,11 +44,6 @@ function App() {
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-6 max-w-6xl">
         <div className="space-y-8">
-          <ContestDemo 
-            showWinner={showWinner} 
-            onToggleWinner={setShowWinner} 
-          />
-          
           <CountdownTimer targetDate={data.contest.announcementDate} />
           
           <HeroSection
