@@ -38,15 +38,7 @@ export function CountdownTimer({ targetDate }: CountdownTimerProps) {
   }, [targetDate])
 
   if (isExpired) {
-    return (
-      <div className="bg-accent text-accent-foreground p-4 rounded-lg text-center">
-        <div className="flex items-center justify-center gap-2 mb-2">
-          <Clock size={20} />
-          <span className="font-semibold">Results Available!</span>
-        </div>
-        <p className="text-sm">The winner announcement is now live!</p>
-      </div>
-    )
+    return null
   }
 
   return (
