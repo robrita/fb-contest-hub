@@ -7,11 +7,6 @@ import { WinnerAnnouncement } from '@/components/contest/WinnerAnnouncement'
 import { ContestantsList } from '@/components/contest/ContestantsList'
 import contestData from '@/data/contest.json'
 
-interface Winner {
-  name: string
-  announcementDate: string
-}
-
 interface ContestData {
   contest: {
     title: string
@@ -21,7 +16,7 @@ interface ContestData {
     announcementDate: string
     mechanics: string[]
   }
-  winner: Winner | null
+  winner: string | null
   contestants: string[]
 }
 
@@ -58,7 +53,7 @@ function App() {
 
           {data.winner && (
             <>
-              <WinnerAnnouncement winner={data.winner} />
+              <WinnerAnnouncement winner={data.winner} announcementDate={data.contest.announcementDate} />
               <Separator />
             </>
           )}
@@ -77,7 +72,7 @@ function App() {
 
           <ContestantsList 
             contestants={data.contestants}
-            winnerName={data.winner?.name}
+            winnerName={data.winner}
           />
         </div>
       </div>

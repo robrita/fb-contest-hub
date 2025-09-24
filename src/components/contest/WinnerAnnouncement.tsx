@@ -4,16 +4,12 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 
-interface Winner {
-  name: string
+interface WinnerAnnouncementProps {
+  winner: string
   announcementDate: string
 }
 
-interface WinnerAnnouncementProps {
-  winner: Winner
-}
-
-export function WinnerAnnouncement({ winner }: WinnerAnnouncementProps) {
+export function WinnerAnnouncement({ winner, announcementDate }: WinnerAnnouncementProps) {
   const [showConfetti, setShowConfetti] = useState(false)
 
   useEffect(() => {
@@ -38,19 +34,19 @@ export function WinnerAnnouncement({ winner }: WinnerAnnouncementProps) {
           <div className="space-y-4">
             <Avatar className="w-24 h-24 mx-auto border-4 border-accent shadow-lg">
               <AvatarFallback className="text-2xl font-bold bg-accent text-accent-foreground">
-                {winner.name.split(' ').map(n => n[0]).join('')}
+                {winner.split(' ').map(n => n[0]).join('')}
               </AvatarFallback>
             </Avatar>
             
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-2">
-                Congratulations, {winner.name}! 🎉
+                Congratulations, {winner}! 🎉
               </h2>
               <p className="text-muted-foreground mb-4">
                 You are our lucky winner! Check your Facebook messages for details on claiming your prize.
               </p>
               <p className="text-sm text-muted-foreground">
-                Winner announced on {new Date(winner.announcementDate).toLocaleDateString('en-US', {
+                Winner announced on {new Date(announcementDate).toLocaleDateString('en-US', {
                   year: 'numeric',
                   month: 'long',
                   day: 'numeric',

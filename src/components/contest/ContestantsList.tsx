@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input'
 
 interface ContestantsListProps {
   contestants: string[]
-  winnerName?: string
+  winnerName?: string | null
 }
 
 export function ContestantsList({ contestants, winnerName }: ContestantsListProps) {
