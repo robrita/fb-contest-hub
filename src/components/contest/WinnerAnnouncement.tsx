@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Trophy, Confetti } from '@phosphor-icons/react'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Trophy } from '@phosphor-icons/react'
+import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 
