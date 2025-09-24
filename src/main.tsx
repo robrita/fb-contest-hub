@@ -1,16 +1,20 @@
 import { createRoot } from 'react-dom/client'
+import { StrictMode } from 'react'
 import { ErrorBoundary } from "react-error-boundary";
-import "@github/spark/spark"
 
 import App from './App.tsx'
 import { ErrorFallback } from './ErrorFallback.tsx'
 
 import "./main.css"
-import "./styles/theme.css"
 import "./index.css"
 
+// Import spark after React setup
+import "@github/spark/spark"
+
 createRoot(document.getElementById('root')!).render(
-  <ErrorBoundary FallbackComponent={ErrorFallback}>
-    <App />
-   </ErrorBoundary>
+  <StrictMode>
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <App />
+    </ErrorBoundary>
+  </StrictMode>
 )
